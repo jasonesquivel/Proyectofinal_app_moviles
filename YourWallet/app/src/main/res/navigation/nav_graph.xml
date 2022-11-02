@@ -31,18 +31,6 @@
         <action
             android:id="@+id/action_login_to_mainActivity"
             app:destination="@id/mainActivity" />
-        <action
-            android:id="@+id/action_login_to_creacionCuenta"
-            app:destination="@id/creacionCuenta" />
-    </fragment>
-    <fragment
-        android:id="@+id/bienvenida"
-        android:name="ni.edu.uca.yourwallet.Bienvenida"
-        android:label="fragment_bienvenida"
-        tools:layout="@layout/fragment_bienvenida" >
-        <action
-            android:id="@+id/action_bienvenida_to_mainActivity"
-            app:destination="@id/mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/ingreso"
@@ -57,5 +45,26 @@
         <action
             android:id="@+id/action_creacionCuenta_to_bienvenida"
             app:destination="@id/bienvenida" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="ni.edu.uca.yourwallet.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_welcome_to_creacionCuenta"
+            app:destination="@id/creacionCuenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/bienvenida"
+        android:name="ni.edu.uca.yourwallet.Bienvenida"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenida_to_mainActivity2"
+            app:destination="@id/mainActivity" />
     </fragment>
 </navigation>
