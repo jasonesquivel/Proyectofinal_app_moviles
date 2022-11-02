@@ -18,7 +18,11 @@
         android:id="@+id/gastos"
         android:name="ni.edu.uca.yourwallet.Gastos"
         android:label="fragment_gastos"
-        tools:layout="@layout/fragment_gastos" />
+        tools:layout="@layout/fragment_gastos" >
+        <action
+            android:id="@+id/action_gastos_to_ingreso"
+            app:destination="@id/ingreso" />
+    </fragment>
     <fragment
         android:id="@+id/login"
         android:name="ni.edu.uca.yourwallet.Login"
@@ -27,6 +31,32 @@
         <action
             android:id="@+id/action_login_to_mainActivity"
             app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_login_to_creacionCuenta"
+            app:destination="@id/creacionCuenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/bienvenida"
+        android:name="ni.edu.uca.yourwallet.Bienvenida"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenida_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingreso"
+        android:name="ni.edu.uca.yourwallet.Ingreso"
+        android:label="fragment_ingreso"
+        tools:layout="@layout/fragment_ingreso" />
+    <fragment
+        android:id="@+id/creacionCuenta"
+        android:name="ni.edu.uca.yourwallet.CreacionCuenta"
+        android:label="fragment_creacion_cuenta"
+        tools:layout="@layout/fragment_creacion_cuenta" >
+        <action
+            android:id="@+id/action_creacionCuenta_to_bienvenida"
+            app:destination="@id/bienvenida" />
     </fragment>
     <fragment
         android:id="@+id/varianzaSalarial"
