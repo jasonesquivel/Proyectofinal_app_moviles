@@ -38,4 +38,9 @@
         android:name="ni.edu.uca.yourwallet.ListaDeCompras"
         android:label="fragment_lista_de_compras"
         tools:layout="@layout/fragment_lista_de_compras" />
+    <fragment
+        android:id="@+id/vacaciones"
+        android:name="ni.edu.uca.yourwallet.Vacaciones"
+        android:label="fragment_vacaciones"
+        tools:layout="@layout/fragment_vacaciones" />
 </navigation>
