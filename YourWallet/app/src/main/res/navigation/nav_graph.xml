@@ -30,9 +30,6 @@
         <action
             android:id="@+id/action_login_to_mainActivity"
             app:destination="@id/mainActivity" />
-        <action
-            android:id="@+id/action_login_to_creacionCuenta"
-            app:destination="@id/creacionCuenta" />
     </fragment>
     <fragment
         android:id="@+id/bienvenida"
@@ -72,4 +69,16 @@
         android:name="ni.edu.uca.yourwallet.Vacaciones"
         android:label="fragment_vacaciones"
         tools:layout="@layout/fragment_vacaciones" />
+    <fragment
+        android:id="@+id/welcome"
+        android:name="ni.edu.uca.yourwallet.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_creacionCuenta"
+            app:destination="@id/creacionCuenta" />
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>
