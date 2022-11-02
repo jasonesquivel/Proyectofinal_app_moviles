@@ -13,16 +13,15 @@
         <action
             android:id="@+id/action_mainActivity_to_gastos2"
             app:destination="@id/gastos" />
+        <action
+            android:id="@+id/action_mainActivity_to_ingreso"
+            app:destination="@id/ingreso" />
     </fragment>
     <fragment
         android:id="@+id/gastos"
         android:name="ni.edu.uca.yourwallet.Gastos"
         android:label="fragment_gastos"
-        tools:layout="@layout/fragment_gastos" >
-        <action
-            android:id="@+id/action_gastos_to_ingreso"
-            app:destination="@id/ingreso" />
-    </fragment>
+        tools:layout="@layout/fragment_gastos" />
     <fragment
         android:id="@+id/login"
         android:name="ni.edu.uca.yourwallet.Login"
