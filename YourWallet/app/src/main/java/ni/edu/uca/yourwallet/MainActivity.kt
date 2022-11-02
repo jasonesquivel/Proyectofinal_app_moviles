@@ -2,10 +2,13 @@ package ni.edu.uca.yourwallet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ni.edu.uca.yourwallet.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
