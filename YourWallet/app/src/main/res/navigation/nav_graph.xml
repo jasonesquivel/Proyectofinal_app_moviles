@@ -5,14 +5,27 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainActivity">
 
-    <activity
+    <fragment
         android:id="@+id/mainActivity"
         android:name="ni.edu.uca.yourwallet.MainActivity"
         android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_gastos2"
+            app:destination="@id/gastos" />
+    </fragment>
     <fragment
         android:id="@+id/gastos"
         android:name="ni.edu.uca.yourwallet.Gastos"
         android:label="fragment_gastos"
         tools:layout="@layout/fragment_gastos" />
+    <fragment
+        android:id="@+id/login"
+        android:name="ni.edu.uca.yourwallet.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
 </navigation>
