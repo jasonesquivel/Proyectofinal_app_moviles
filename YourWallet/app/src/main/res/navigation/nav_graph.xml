@@ -5,11 +5,15 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainActivity">
 
-    <activity
+    <fragment
         android:id="@+id/mainActivity"
         android:name="ni.edu.uca.yourwallet.MainActivity"
         android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_gastos"
+            app:destination="@id/gastos" />
+    </fragment>
     <fragment
         android:id="@+id/gastos"
         android:name="ni.edu.uca.yourwallet.Gastos"
