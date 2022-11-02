@@ -27,5 +27,13 @@
         <action
             android:id="@+id/action_login_to_mainActivity"
             app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_login_to_bienvenida"
+            app:destination="@id/bienvenida" />
     </fragment>
+    <fragment
+        android:id="@+id/bienvenida"
+        android:name="ni.edu.uca.yourwallet.Bienvenida"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" />
 </navigation>
