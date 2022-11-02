@@ -28,12 +28,21 @@
             android:id="@+id/action_login_to_mainActivity"
             app:destination="@id/mainActivity" />
         <action
-            android:id="@+id/action_login_to_bienvenida"
-            app:destination="@id/bienvenida" />
+            android:id="@+id/action_login_to_creacionCuenta"
+            app:destination="@id/creacionCuenta" />
     </fragment>
     <fragment
         android:id="@+id/bienvenida"
         android:name="ni.edu.uca.yourwallet.Bienvenida"
         android:label="fragment_bienvenida"
         tools:layout="@layout/fragment_bienvenida" />
+    <fragment
+        android:id="@+id/creacionCuenta"
+        android:name="ni.edu.uca.yourwallet.CreacionCuenta"
+        android:label="fragment_creacion_cuenta"
+        tools:layout="@layout/fragment_creacion_cuenta" >
+        <action
+            android:id="@+id/action_creacionCuenta_to_bienvenida"
+            app:destination="@id/bienvenida" />
+    </fragment>
 </navigation>
