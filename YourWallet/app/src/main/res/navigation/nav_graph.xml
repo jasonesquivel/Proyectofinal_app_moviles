@@ -57,4 +57,19 @@
             android:id="@+id/action_creacionCuenta_to_bienvenida"
             app:destination="@id/bienvenida" />
     </fragment>
+    <fragment
+        android:id="@+id/listaDeCompras"
+        android:name="ni.edu.uca.yourwallet.ListaDeCompras"
+        android:label="fragment_lista_de_compras"
+        tools:layout="@layout/fragment_lista_de_compras" />
+    <fragment
+        android:id="@+id/varianzaSalarial"
+        android:name="ni.edu.uca.yourwallet.VarianzaSalarial"
+        android:label="fragment_varianza_salarial"
+        tools:layout="@layout/fragment_varianza_salarial" />
+    <fragment
+        android:id="@+id/vacaciones"
+        android:name="ni.edu.uca.yourwallet.Vacaciones"
+        android:label="fragment_vacaciones"
+        tools:layout="@layout/fragment_vacaciones" />
 </navigation>
