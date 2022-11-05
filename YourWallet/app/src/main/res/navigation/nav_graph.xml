@@ -81,6 +81,9 @@
         <action
             android:id="@+id/action_menu_to_ingreso"
             app:destination="@id/ingreso" />
+        <action
+            android:id="@+id/action_menu_to_vacaciones"
+            app:destination="@id/vacaciones" />
     </fragment>
 
 </navigation>
