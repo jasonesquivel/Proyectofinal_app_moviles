@@ -19,18 +19,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/mainActivity"
-        android:name="ni.edu.uca.yourwallet.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" >
-        <action
-            android:id="@+id/action_mainActivity_to_gastos2"
-            app:destination="@id/gastos" />
-        <action
-            android:id="@+id/action_mainActivity_to_ingreso"
-            app:destination="@id/ingreso" />
-    </fragment>
-    <fragment
         android:id="@+id/gastos"
         android:name="ni.edu.uca.yourwallet.Gastos"
         android:label="fragment_gastos"
@@ -41,8 +29,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
     </fragment>
     <fragment
         android:id="@+id/bienvenida"
@@ -50,8 +38,8 @@
         android:label="fragment_bienvenida"
         tools:layout="@layout/fragment_bienvenida" >
         <action
-            android:id="@+id/action_bienvenida_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_bienvenida_to_menu"
+            app:destination="@id/menu" />
     </fragment>
     <fragment
         android:id="@+id/ingreso"
@@ -82,5 +70,17 @@
         android:name="ni.edu.uca.yourwallet.Vacaciones"
         android:label="fragment_vacaciones"
         tools:layout="@layout/fragment_vacaciones" />
+    <fragment
+        android:id="@+id/menu"
+        android:name="ni.edu.uca.yourwallet.menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_gastos"
+            app:destination="@id/gastos" />
+        <action
+            android:id="@+id/action_menu_to_ingreso"
+            app:destination="@id/ingreso" />
+    </fragment>
 
 </navigation>
