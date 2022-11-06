@@ -13,6 +13,8 @@
         tools:context=".MainActivity">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:paddingStart="0.01dp"
+            android:paddingTop="20dp"
             android:id="@+id/cv_Wallet"
             android:layout_width="54dp"
             android:layout_height="64dp"

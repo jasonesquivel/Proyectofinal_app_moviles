@@ -14,7 +14,7 @@
             android:id="@+id/action_welcome_to_creacionCuenta"
             app:destination="@id/creacionCuenta" />
         <action
-            android:id="@+id/action_welcome_to_login"
+            android:id="@+id/welcome_login"
             app:destination="@id/login" />
     </fragment>
 
@@ -29,7 +29,7 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_menu"
+            android:id="@+id/login_menu"
             app:destination="@id/menu" />
     </fragment>
     <fragment

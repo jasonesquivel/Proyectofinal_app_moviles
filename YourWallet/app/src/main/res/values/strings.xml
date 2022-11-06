@@ -5,4 +5,7 @@
     <string name="bienvenido_a_your_wallet">Bienvenido a your Wallet</string>
     <string name="por_favor_llene_los_siguiente_campos_para_ingresar_satisfactoriamente_a_su_cuenta">Por favor llene los siguiente campos para ingresar satisfactoriamente a su cuenta</string>
     <string name="por_favor_llene_los_siguiente_campos_para_crear_su_cuenta">Por favor llene los siguiente campos para crear su cuenta</string>
+    <string name="Empresaname">Your Wallet</string>
+    <string name="navegation_drawer_open">open</string>
+    <string name="navegation_drawer_close">close</string>
 </resources>

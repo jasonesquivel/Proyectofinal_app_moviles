@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import ni.edu.uca.yourwallet.databinding.FragmentWelcomeBinding
 
 
 class Welcome : Fragment() {
 
 lateinit var binding: FragmentWelcomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -26,7 +29,15 @@ lateinit var binding: FragmentWelcomeBinding
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        (activity as AppCompatActivity).supportActionBar?.hide()
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnLogin.setOnClickListener {
+            it.findNavController().navigate(R.id.welcome_login)
+
+
+        }
 
     }
 
