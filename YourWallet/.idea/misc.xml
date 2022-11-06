@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidSt/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
-        <entry key="..\:/AndroidSt/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_bienvenida.xml" value="0.1" />
-        <entry key="..\:/AndroidSt/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_creacion_cuenta.xml" value="0.2" />
-        <entry key="..\:/AndroidSt/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_login.xml" value="0.18" />
+        <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_agregar_gastos.xml" value="0.209375" />
+        <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_creacion_cuenta.xml" value="0.209375" />
+        <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_gastos.xml" value="0.209375" />
+        <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_ingreso.xml" value="0.209375" />
+        <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_welcome.xml" value="0.209375" />
       </map>
     </option>
   </component>

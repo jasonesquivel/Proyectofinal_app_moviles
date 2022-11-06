@@ -85,5 +85,10 @@
             android:id="@+id/action_menu_to_vacaciones"
             app:destination="@id/vacaciones" />
     </fragment>
+    <fragment
+        android:id="@+id/agregarGastos"
+        android:name="ni.edu.uca.yourwallet.AgregarGastos"
+        android:label="fragment_agregar_gastos"
+        tools:layout="@layout/fragment_agregar_gastos" />
 
 </navigation>

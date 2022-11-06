@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Gastos">
+    tools:context=".AgregarGastos">
 
     <TextView
         android:id="@+id/tvTitulo"
@@ -22,6 +22,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/arrowback_111142"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvSeparador"
         android:layout_width="wrap_content"
@@ -34,32 +45,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvTitulo"
         app:layout_constraintVertical_bias="0.04" />
-
-    <ImageButton
-        android:id="@+id/btnMenu"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/icono_menu"
-        app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgLogo1"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="310dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/icono_usuario"
-        app:civ_circle_background_color="#EDB61C"
-        app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingClass" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardGastos"
@@ -82,11 +67,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="290dp"
-        android:background="@drawable/icono_agregar"
+        android:background="@drawable/icono_checkbox"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardGastos"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
