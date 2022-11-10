@@ -4,6 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidSt/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_agregar_gastos.xml" value="0.24818840579710144" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_bienvenida.xml" value="0.3" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_creacion_cuenta.xml" value="0.24818840579710144" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_gastos.xml" value="0.24818840579710144" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_ingreso.xml" value="0.24818840579710144" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_lista_de_compras.xml" value="0.24818840579710144" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_menu.xml" value="0.24818840579710144" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_varianza_salarial.xml" value="0.3" />
+        <entry key="..\:/Gradle/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_welcome.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_agregar_gastos.xml" value="0.209375" />
         <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_creacion_cuenta.xml" value="0.209375" />
         <entry key="..\:/Users/janca/Desktop/Proyectofinal_app_moviles/YourWallet/app/src/main/res/layout/fragment_gastos.xml" value="0.209375" />
