@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".CreacionDeCuenta">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:paddingStart="0.01dp"
+            android:paddingTop="20dp"
+            android:id="@+id/cv_Wallet"
+            android:layout_width="54dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_wallet"
+            app:civ_circle_background_color="#EDB61C"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/tv_Bienvenida"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Bienvenida"
+            android:layout_width="386dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/merriweather_black"
+            android:shadowColor="#000000"
+            android:text="@string/bienvenido_a_your_wallet"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Anuncio"
+            android:layout_width="310dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/merriweather"
+            android:text="@string/por_favor_llene_los_siguiente_campos_para_crear_su_cuenta"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_Bienvenida" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="28dp"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_Anuncio" />
+
+        <EditText
+            android:id="@+id/etApellido"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etNombre" />
+
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etApellido" />
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Usuario"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCorreo" />
+
+        <EditText
+            android:id="@+id/etContraseña"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etUsuario" />
+
+        <EditText
+            android:id="@+id/etCfContraseña"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Confirmar contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etContraseña" />
+
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="201dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="#143688"
+            android:fontFamily="@font/merriweather_black"
+            android:text="Registrar"
+            android:textColor="@android:color/white"
+            app:cornerRadius="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCfContraseña" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F9FE"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/tv_Bienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/merriweather_black"
+        android:shadowColor="#000000"
+        android:text="@string/bienvenido_a_your_wallet"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Anuncio"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/merriweather"
+        android:text="@string/por_favor_llene_los_siguiente_campos_para_ingresar_satisfactoriamente_a_su_cuenta"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Bienvenida" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="341dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:hint="Usuario"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Anuncio" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="341dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUsername" />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:background="#5471B5"
+        android:text="Ingresar"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <TextView
+        android:id="@+id/tv_forgotP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/merriweather_black"
+        android:shadowColor="#000000"
+        android:text="Olvidó su contraseña?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogIn" />
+
+    <Button
+        android:id="@+id/btnReestablecerContra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:fontFamily="@font/merriweather_black"
+        android:text="Reestablecer contraseña"
+        android:textColor="#5471B5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgotP" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -76,7 +76,7 @@
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
         <action
-            android:id="@+id/action_menu_to_gastos"
+            android:id="@+id/menu_gastos"
             app:destination="@id/gastos" />
         <action
             android:id="@+id/action_menu_to_ingreso"

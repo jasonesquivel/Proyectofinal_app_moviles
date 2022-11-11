@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bienvenida">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cv_User"
+        android:layout_width="66dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_user"
+        app:civ_circle_background_color="#EDB61C"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/merriweather_black"
+        android:text="¡Bienvenido, José! "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toEndOf="@+id/cv_User"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_CrearWallet"
+        android:layout_width="143dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/merriweather"
+        android:text="Crear my wallet"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_User" />
+
+    <TextView
+        android:id="@+id/tvSeparador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="_________________"
+        android:textColor="#3C55D5"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Usuario" />
+
+    <TextView
+        android:id="@+id/tv_Salario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Salario C$:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeparador" />
+
+    <EditText
+        android:id="@+id/etSalario"
+        android:layout_width="209dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/merriweather"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toEndOf="@+id/tv_Salario"
+        app:layout_constraintTop_toBottomOf="@id/tvSeparador" />
+
+    <TextView
+        android:id="@+id/tvPago"
+        android:layout_width="209dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/merriweather"
+        android:text="Tipo de pago:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Salario" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPago" />
+
+    <RadioButton
+        android:id="@+id/radioBtnSemanal"
+        android:layout_width="103dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="280dp"
+        android:text="Semanal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup" />
+
+    <RadioButton
+        android:id="@+id/radioBtnQuincenal"
+        android:layout_width="103dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="280dp"
+        android:text="Quincenal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioBtnSemanal" />
+
+    <RadioButton
+        android:id="@+id/radioBtnMensual"
+        android:layout_width="103dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="280dp"
+        android:text="Mensual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioBtnQuincenal" />
+
+    <Button
+        android:id="@+id/btnGuardarWallet"
+        android:layout_width="189dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:background="#5471B5"
+        android:fontFamily="@font/merriweather_black"
+        android:text="Guardar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioBtnMensual"
+        app:layout_constraintVertical_bias="0.098" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

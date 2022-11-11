@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/welcome">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/welcome"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/welcome_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/welcome_creacionDeCuenta"
+            app:destination="@id/creacionDeCuenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/login_navhome"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/creacionDeCuenta"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.CreacionDeCuenta"
+        android:label="fragment_creacion_de_cuenta"
+        tools:layout="@layout/fragment_creacion_de_cuenta" >
+        <action
+            android:id="@+id/creacionDeCuenta_bienvenida"
+            app:destination="@id/bienvenida" />
+    </fragment>
+    <fragment
+        android:id="@+id/bienvenida"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.Bienvenida"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/bienvenida_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>

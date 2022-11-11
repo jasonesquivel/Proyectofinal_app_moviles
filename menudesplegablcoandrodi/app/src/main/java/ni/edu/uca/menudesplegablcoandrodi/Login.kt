@@ -1,4 +1,4 @@
-package ni.edu.uca.yourwallet
+package ni.edu.uca.menudesplegablcoandrodi
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
-import ni.edu.uca.yourwallet.databinding.FragmentLoginBinding
-import ni.edu.uca.yourwallet.databinding.FragmentWelcomeBinding
+import ni.edu.uca.menudesplegablcoandrodi.R
+import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentLoginBinding
+
 
 
 
@@ -38,9 +39,9 @@ class Login : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
         binding.btnLogIn.setOnClickListener {
-            it.findNavController().navigate(R.id.login_menu)
+            it.findNavController().navigate(R.id.login_navhome)
 
-
+            (activity as AppCompatActivity).supportActionBar?.show()
         }
 
     }
