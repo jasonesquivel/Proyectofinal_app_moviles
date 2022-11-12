@@ -64,16 +64,16 @@
     <fragment
         android:id="@+id/listaDeCompras"
         android:name="ni.edu.uca.menudesplegablcoandrodi.ListaDeCompras"
-        android:label="fragment_lista_de_compras"
+        android:label="Lista de compras"
         tools:layout="@layout/fragment_lista_de_compras" />
     <fragment
         android:id="@+id/varianzaSalarial"
         android:name="ni.edu.uca.menudesplegablcoandrodi.VarianzaSalarial"
-        android:label="fragment_varianza_salarial"
+        android:label="Varianza salarial"
         tools:layout="@layout/fragment_varianza_salarial" />
     <fragment
         android:id="@+id/ingreso"
         android:name="ni.edu.uca.menudesplegablcoandrodi.Ingreso"
-        android:label="fragment_ingreso"
+        android:label="Ingreso"
         tools:layout="@layout/fragment_ingreso" />
 </navigation>
