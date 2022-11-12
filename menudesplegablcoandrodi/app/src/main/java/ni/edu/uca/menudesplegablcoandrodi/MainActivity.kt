@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
      supportActionBar?.hide()
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow ,R.id.varianzaSalarial, R.id.listaDeCompras, R.id.ingreso
             ), drawerLayout
         )
 

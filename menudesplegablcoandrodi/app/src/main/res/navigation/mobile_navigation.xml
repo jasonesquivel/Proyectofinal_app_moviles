@@ -61,4 +61,19 @@
             android:id="@+id/bienvenida_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
+    <fragment
+        android:id="@+id/listaDeCompras"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.ListaDeCompras"
+        android:label="fragment_lista_de_compras"
+        tools:layout="@layout/fragment_lista_de_compras" />
+    <fragment
+        android:id="@+id/varianzaSalarial"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.VarianzaSalarial"
+        android:label="fragment_varianza_salarial"
+        tools:layout="@layout/fragment_varianza_salarial" />
+    <fragment
+        android:id="@+id/ingreso"
+        android:name="ni.edu.uca.menudesplegablcoandrodi.Ingreso"
+        android:label="fragment_ingreso"
+        tools:layout="@layout/fragment_ingreso" />
 </navigation>
