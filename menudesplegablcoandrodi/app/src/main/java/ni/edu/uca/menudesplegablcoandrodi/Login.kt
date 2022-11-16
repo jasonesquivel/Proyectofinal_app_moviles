@@ -45,6 +45,7 @@ class Login : Fragment() {
             var pass = binding.etPassword.text.toString()
 
             users.add(Usuario("Admin","1234"))
+            users.add(Usuario("Jason","Esquivel"))
 
             if(users.contains(Usuario(user,pass))){
                 it.findNavController().navigate(R.id.login_navhome)
