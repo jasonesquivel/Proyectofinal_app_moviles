@@ -1,7 +1,7 @@
 package ni.edu.uca.menudesplegablcoandrodi.model
 
 data class ComprasData(
-    val nombreProd: String,
-    val cantidadProd: String,
-    val precioProd: String
+    var nombreProd: String,
+    var cantidadProd: String,
+    var precioProd: String
 )

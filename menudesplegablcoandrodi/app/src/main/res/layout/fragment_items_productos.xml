@@ -53,6 +53,7 @@
                 />
         </LinearLayout>
         <ImageView
+            android:id="@+id/mMenus"
             android:src="@drawable/ic_more"
             android:layout_gravity="center"
             android:layout_margin="10dp"

@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/drawable/shape_agregar_productos.xml" value="0.1375" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/drawable/shape_agregarproductos.xml" value="0.1375" />
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/add_item_gasto.xml" value="0.22871376811594202" />
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/app_bar_main.xml" value="0.16032608695652173" />
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_agregar_productos.xml" value="0.22871376811594202" />
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_creacion_de_cuenta.xml" value="0.16032608695652173" />
@@ -13,6 +15,8 @@
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_lista_de_compras.xml" value="0.25" />
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_login.xml" value="0.17074275362318841" />
         <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_slideshow.xml" value="0.16032608695652173" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/list_item_gastos.xml" value="0.22871376811594202" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/menu/show_menu.xml" value="0.25" />
       </map>
     </option>
   </component>
