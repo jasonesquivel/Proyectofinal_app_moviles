@@ -26,8 +26,8 @@
 
         />
     <TextView
-        android:id="@+id/tvcompensacion"
-        android:text="Ingrese la compensacion salarial en cordobas"
+        android:id="@+id/tvInicio"
+        android:text="Seleccione el dia que comienza sus vacaciones"
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_width="wrap_content"
@@ -36,7 +36,24 @@
         android:layout_marginStart="25dp"
         />
     <EditText
-        android:id="@+id/etCompensacionVac"
+        android:id="@+id/etInicio"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="23dp"
+        />
+    <TextView
+        android:id="@+id/tvFin"
+        android:text="Seleccione el dia termina"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="25dp"
+        />
+    <EditText
+        android:id="@+id/etfin"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
