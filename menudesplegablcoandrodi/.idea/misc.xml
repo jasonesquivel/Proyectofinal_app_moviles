@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/drawable/shape_agregar_productos.xml" value="0.1375" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/app_bar_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_agregar_productos.xml" value="0.22871376811594202" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_creacion_de_cuenta.xml" value="0.16032608695652173" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_gallery.xml" value="0.16032608695652173" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_items_productos.xml" value="0.22871376811594202" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_lista_de_compras.xml" value="0.25" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/AndroidSt/FinalProjectDAMO1/menudesplegablcoandrodi/app/src/main/res/layout/fragment_slideshow.xml" value="0.16032608695652173" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
