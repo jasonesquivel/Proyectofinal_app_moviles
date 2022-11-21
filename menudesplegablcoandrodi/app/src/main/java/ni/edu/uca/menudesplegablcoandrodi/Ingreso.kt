@@ -5,55 +5,74 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentIngresoBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Ingreso.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Ingreso : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var binding: FragmentIngresoBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ingreso, container, false)
+        binding = FragmentIngresoBinding.inflate(inflater, container, false)
+        return binding.root
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Ingreso.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Ingreso().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+
+        }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnGuardarSaldo.setOnClickListener {
+            calcularIngresos()
+
+        }
+
+    }
+
+
+
+    private fun calcularIngresos(){
+        val stringInTextField = binding.etIngreso.text.toString()
+        val valueInTextField = binding.etRazonIngreso.text.toString()
+        val dateInTextField = binding.etFechaIngreso.text.toString()
+
+
+
+
+        if(stringInTextField.isEmpty() || valueInTextField.isEmpty() || dateInTextField.isEmpty()  ){
+            Toast.makeText(context,"Por favor llene todos los campos!", Toast.LENGTH_SHORT).show()
+
+        }
+        else{
+            Toast.makeText(context,"El proceso ha sido exitoso!", Toast.LENGTH_SHORT).show()
+        }
+
+        //Error en esta parte del codigo, la aplicacion se detiene cuando se guardan todos los datos
+        binding.btnGuardarSaldo.setOnClickListener {
+            var saldoActual: Int = binding.etIngreso.text.toString().toInt()
+            var saldoIngresado : Int = binding.etRazonIngreso.text.toString().toInt()
+            var total : Int = (saldoActual + saldoIngresado)
+            binding.tvSaldoActual.setText(total)
+
+
+        }
+
+
+    }
+
+
+
 }

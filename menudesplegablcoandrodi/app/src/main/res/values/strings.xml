@@ -23,4 +23,7 @@
     <string name="vacaciones">Vacaciones</string>
     <string name="inicio">Inicio</string>
     <string name="varianza_salarial">Varianza salarial</string>
+    <string name="Ingreso_en_cordobas">Ingreso en córdobas</string>
+    <string name="Razon_de_ingreso">Razón de ingreso</string>
+    <string name="Fecha_de_ingreso">Fecha de ingreso</string>
 </resources>
