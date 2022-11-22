@@ -43,8 +43,7 @@ class Ingreso : Fragment() {
     }
 
 
-
-    private fun calcularIngresos(){
+    private fun calcularIngresos() {
         val stringInTextField = binding.etIngreso.text.toString()
         val valueInTextField = binding.etRazonIngreso.text.toString()
         val dateInTextField = binding.etFechaIngreso.text.toString()
@@ -52,19 +51,18 @@ class Ingreso : Fragment() {
 
 
 
-        if(stringInTextField.isEmpty() || valueInTextField.isEmpty() || dateInTextField.isEmpty()  ){
-            Toast.makeText(context,"Por favor llene todos los campos!", Toast.LENGTH_SHORT).show()
+        if (stringInTextField.isEmpty() || valueInTextField.isEmpty() || dateInTextField.isEmpty()) {
+            Toast.makeText(context, "Por favor llene todos los campos!", Toast.LENGTH_SHORT).show()
 
-        }
-        else{
-            Toast.makeText(context,"El proceso ha sido exitoso!", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(context, "El proceso ha sido exitoso!", Toast.LENGTH_SHORT).show()
         }
 
         //Error en esta parte del codigo, la aplicacion se detiene cuando se guardan todos los datos
         binding.btnGuardarSaldo.setOnClickListener {
             var saldoActual: Int = binding.etIngreso.text.toString().toInt()
-            var saldoIngresado : Int = binding.etRazonIngreso.text.toString().toInt()
-            var total : Int = (saldoActual + saldoIngresado)
+            var saldoIngresado: Int = binding.etRazonIngreso.text.toString().toInt()
+            var total: Int = (saldoActual + saldoIngresado)
             binding.tvSaldoActual.setText(total)
 
 
@@ -72,7 +70,6 @@ class Ingreso : Fragment() {
 
 
     }
-
 
 
 }

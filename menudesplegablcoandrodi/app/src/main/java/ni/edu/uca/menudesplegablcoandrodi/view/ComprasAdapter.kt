@@ -49,29 +49,23 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
                         val nombre = v.findViewById<EditText>(R.id.etNombreProd)
                         val canti = v.findViewById<EditText>(R.id.etCantProd)
                         val precio = v.findViewById<EditText>(R.id.etPrecioProd)
-                        val prodCant = cantidad.text.toString()
-                        var prodPrecio = precio.text.toString()
-
-
-                       // var precioTotal = canti.toString().toInt()*precio.toString().toInt()
-                       // var T = precioTotal.toString()
 
                         AlertDialog.Builder(c)
                             .setView(v)
                             .setPositiveButton("Ok") { dialog, _ ->
-
                                 position.nombreProd = ("Producto: " + nombre.text.toString())
                                 position.cantidadProd = ("Cant: " + canti.text.toString())
                                 position.precioProd = ("C$: " + precio.text.toString())
-                                position.precioTotal = ("total: "+ canti.text.toString().toInt()*precio.text.toString().toInt())
+                                position.precioTotal = ("Total: " + canti.text.toString()
+                                    .toInt() * precio.text.toString().toInt())
 
                                 notifyDataSetChanged()
-                                Toast.makeText(c, "User Information is Edited", Toast.LENGTH_SHORT)
+                                Toast.makeText(c, "Producto Editado", Toast.LENGTH_SHORT)
                                     .show()
                                 dialog.dismiss()
 
                             }
-                            .setNegativeButton("Cancel") { dialog, _ ->
+                            .setNegativeButton("Cancelar") { dialog, _ ->
                                 dialog.dismiss()
 
                             }
@@ -85,11 +79,11 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
                         AlertDialog.Builder(c)
                             .setTitle("Delete")
                             .setIcon(R.drawable.ic_warning)
-                            .setMessage("Are you sure delete this Information")
-                            .setPositiveButton("Yes") { dialog, _ ->
+                            .setMessage("Esta seguro de eliminar este producto?")
+                            .setPositiveButton("Si") { dialog, _ ->
                                 comprasList.removeAt(adapterPosition)
                                 notifyDataSetChanged()
-                                Toast.makeText(c, "Deleted this Information", Toast.LENGTH_SHORT)
+                                Toast.makeText(c, "Producto Eliminado", Toast.LENGTH_SHORT)
                                     .show()
                                 dialog.dismiss()
                             }

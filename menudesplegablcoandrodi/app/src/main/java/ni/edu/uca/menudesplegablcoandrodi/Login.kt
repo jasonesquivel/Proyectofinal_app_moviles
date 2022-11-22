@@ -43,21 +43,20 @@ class Login : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
 
-            try {
-                binding.btnLogIn.setOnClickListener {
-                    val nameTemp: String = binding.etUsername.text.toString()
-                    val pwdTemp: String = binding.etPassword.text.toString()
+        try {
+            binding.btnLogIn.setOnClickListener {
+                val nameTemp: String = binding.etUsername.text.toString()
+                val pwdTemp: String = binding.etPassword.text.toString()
 
-                    if (nameTemp == preferen.getUSer() && pwdTemp == preferen.getPass()) {
-                        Navigation.findNavController(binding.root).navigate(R.id.nav_home)
-                    } else {
-                        Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
-                    }
-                    (activity as AppCompatActivity).supportActionBar?.show()
+                if (nameTemp == preferen.getUSer() && pwdTemp == preferen.getPass()) {
+                    Navigation.findNavController(binding.root).navigate(R.id.nav_home)
+                } else {
+                    Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
                 }
-            } catch (ex: Exception) {
+                (activity as AppCompatActivity).supportActionBar?.show()
             }
-
+        } catch (ex: Exception) {
+        }
 
 
     }

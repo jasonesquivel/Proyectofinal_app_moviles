@@ -15,7 +15,7 @@ import ni.edu.uca.menudesplegablcoandrodi.model.Shared.Companion.preferen
 
 
 class CreacionDeCuenta : Fragment() {
-    private lateinit var  drawer: DrawerLayout
+    private lateinit var drawer: DrawerLayout
     lateinit var binding: FragmentCreacionDeCuentaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -31,10 +31,11 @@ class CreacionDeCuenta : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentCreacionDeCuentaBinding.inflate(inflater, container, false)
+        binding = FragmentCreacionDeCuentaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (activity as AppCompatActivity).supportActionBar?.hide()
         super.onViewCreated(view, savedInstanceState)

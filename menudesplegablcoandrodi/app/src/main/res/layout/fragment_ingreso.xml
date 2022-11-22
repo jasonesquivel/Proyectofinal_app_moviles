@@ -12,43 +12,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="107dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/merriweather_black"
         android:text="Saldo:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/tvCordobas"
         android:layout_width="50dp"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="C$"
+        android:fontFamily="@font/merriweather"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintHorizontal_bias="0.116"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintLeft_toRightOf="@id/tvSaldo"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/tvSaldoActual"
         android:layout_width="62dp"
         android:layout_height="27dp"
-        android:layout_marginTop="16dp"
-        android:text="0"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textStyle="bold"
+        android:fontFamily="@font/merriweather"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintHorizontal_bias="0.986"
         app:layout_constraintLeft_toRightOf="@id/tvSaldo"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCordobas"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -56,14 +61,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="@font/merriweather_black"
         android:text="Agregar ingreso:"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,21 +76,20 @@
         android:id="@+id/tvSeparador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="624dp"
+        android:layout_marginBottom="604dp"
         android:text="______________"
         android:textColor="#3C55D5"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <EditText
         android:id="@+id/etIngreso"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/custom_input"
         android:ems="10"
         android:hint="@string/Ingreso_en_cordobas"
@@ -117,7 +121,7 @@
         android:id="@+id/etFechaIngreso"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/custom_input"
         android:ems="10"
         android:hint="@string/Fecha_de_ingreso"
@@ -133,7 +137,7 @@
         android:id="@+id/btnGuardarSaldo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="236dp"
+        android:layout_marginBottom="92dp"
         android:backgroundTint="#3C55D5"
         android:fontFamily="@font/merriweather_black"
         android:padding="15dp"
@@ -142,7 +146,7 @@
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
 

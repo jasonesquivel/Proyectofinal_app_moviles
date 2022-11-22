@@ -25,10 +25,11 @@ class welcome : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding= FragmentWelcomeBinding.inflate(inflater, container, false)
+        binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return binding.root
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         (activity as AppCompatActivity).supportActionBar?.hide()
@@ -50,7 +51,6 @@ class welcome : Fragment() {
         }
 
     }
-
 
 
 }

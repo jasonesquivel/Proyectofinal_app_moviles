@@ -14,7 +14,7 @@ import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentCreacionDeCuentaBi
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentLoginBinding
 
 class Bienvenida : Fragment() {
-    private lateinit var  drawer: DrawerLayout
+    private lateinit var drawer: DrawerLayout
     lateinit var binding: FragmentBienvenidaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -30,10 +30,11 @@ class Bienvenida : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentBienvenidaBinding.inflate(inflater, container, false)
+        binding = FragmentBienvenidaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (activity as AppCompatActivity).supportActionBar?.hide()
         super.onViewCreated(view, savedInstanceState)

@@ -31,9 +31,9 @@ class SlideshowFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private lateinit var addsbtn:FloatingActionButton
-    private lateinit var recv:RecyclerView
-    private lateinit var userList:ArrayList<UserData>
+    private lateinit var addsbtn: FloatingActionButton
+    private lateinit var recv: RecyclerView
+    private lateinit var userList: ArrayList<UserData>
     private lateinit var userAdapter: UserAdapter
 
     override fun onCreateView(
@@ -55,17 +55,18 @@ class SlideshowFragment : Fragment() {
         }
         return root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val inflter = LayoutInflater.from(context)
 
         val v = inflter.inflate(R.layout.fragment_slideshow, null)
-        recv= v.findViewById<RecyclerView>(R.id.mRecycler)
+        recv = v.findViewById<RecyclerView>(R.id.mRecycler)
 
 
 
 
-        binding.addingBtn.setOnClickListener{
+        binding.addingBtn.setOnClickListener {
             addInfo()
 
         }
@@ -80,23 +81,21 @@ class SlideshowFragment : Fragment() {
             val userno = v.findViewById<EditText>(R.id.etuserNo)
             val addDialog = context?.let { AlertDialog.Builder(it) }
             addDialog?.setView(v)
-            addDialog?.setPositiveButton("ok"){
-                    dialog,_->  val names = username.text.toString()
+            addDialog?.setPositiveButton("ok") { dialog, _ ->
+                val names = username.text.toString()
                 val number = userno.text.toString()
-                userList.add(UserData("Nombre: $names","Numero de telefono: $number"))
+                userList.add(UserData("Nombre: $names", "Numero de telefono: $number"))
                 dialog.dismiss()
             }
-            addDialog?.setNegativeButton("cancel"){
-                    dialog,_->
+            addDialog?.setNegativeButton("cancel") { dialog, _ ->
                 dialog.dismiss()
             }
             mRecycler.layoutManager = LinearLayoutManager(context)
-            mRecycler.adapter = context?.let { UserAdapter(it,userList) }
+            mRecycler.adapter = context?.let { UserAdapter(it, userList) }
 
 
             addDialog?.create()
             addDialog?.show()
-
 
 
         }
