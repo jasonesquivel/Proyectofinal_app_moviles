@@ -43,9 +43,11 @@ class CreacionDeCuenta : Fragment() {
             val user = binding.etUsuario.text.toString()
             val pass = binding.etContraseA.text.toString()
             val sal = binding.etSaldoactual.text.toString()
+            val salario = binding.etSalario.text.toString()
             preferen.SaveUsuario(user)
             preferen.SavePass(pass)
             preferen.SaveSal(sal)
+            preferen.SaveSalario(salario)
             it.findNavController().navigate(R.id.login)
 
             (activity as AppCompatActivity).supportActionBar?.show()

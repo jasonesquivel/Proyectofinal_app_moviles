@@ -37,8 +37,10 @@ class HomeFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var msn = preferen.getSal()
-        binding.tvSaldo.setText(msn)
+        var msnsalario = preferen.getSalSalario()
+        binding.tvSalario.setText(msnsalario)
+        var msnsal = preferen.getSal()
+        binding.tvSaldo.setText(msnsal)
 
     }
 
