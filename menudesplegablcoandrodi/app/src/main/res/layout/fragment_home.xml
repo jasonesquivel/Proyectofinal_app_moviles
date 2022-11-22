@@ -10,96 +10,116 @@
         android:id="@+id/dineroSalario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
         android:text="Salario C$: "
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/calendario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.238" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/tvSalario"
-        android:text=""
-        app:layout_constraintHorizontal_bias="0.1"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/calendario"
-        app:layout_constraintStart_toEndOf="@id/dineroSalario"
-        />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/dinero"
-    android:text="Saldo C$: "
-    android:textStyle="bold"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/calendario"
-    app:layout_constraintStart_toEndOf="@id/tvSalario"
-    />
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvSaldo"
-        android:text=""
-        app:layout_constraintHorizontal_bias="0.1"
+        android:fontFamily="@font/merriweather"
+        android:text="2000"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/calendario"
-        app:layout_constraintStart_toEndOf="@id/dinero"
-        />
-    <CalendarView
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/dineroSalario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <TextView
+        android:id="@+id/dinero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
+        android:text="Saldo C$: "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@id/tvSalario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather"
+        android:text="1500"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/calendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toEndOf="@id/dinero"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <CalendarView
         android:id="@+id/calendario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
-        app:layout_constraintVertical_bias="0.03"
-        app:layout_constraintTop_toBottomOf="@+id/calendario"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <TextView
         android:id="@+id/Textogasto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Historial de gastos"/><!--Esto debria estar en strings-->
-
+        android:text="Historial de gastos"
+        android:textStyle="bold"
+        android:fontFamily="@font/merriweather"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendario"
+        app:layout_constraintVertical_bias="0.03" /><!--Esto debria estar en strings-->
 
 
     <TextView
 
-        app:layout_constraintTop_toBottomOf="@+id/calendario"
-        app:layout_constraintBottom_toTopOf="@id/rcvLista"
-        app:layout_constraintStart_toEndOf="@id/Textogasto"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvFechaActual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvFechaActual"
-        />
+        app:layout_constraintBottom_toTopOf="@id/rcvLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Textogasto"
+        app:layout_constraintTop_toBottomOf="@+id/calendario" />
 
     <androidx.recyclerview.widget.RecyclerView
-        app:layout_constraintVertical_bias="0.06"
-        app:layout_constraintTop_toBottomOf="@+id/Textogasto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/rcvLista"
         android:layout_width="match_parent"
         android:layout_height="218dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Textogasto"
+        app:layout_constraintVertical_bias="0.174" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
