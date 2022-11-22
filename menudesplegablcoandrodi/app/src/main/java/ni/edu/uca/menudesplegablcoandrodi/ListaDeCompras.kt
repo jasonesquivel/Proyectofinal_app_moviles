@@ -85,11 +85,14 @@ class ListaDeCompras : Fragment() {
                 val prodName = nombre.text
                 val prodCant = cantidad.text.toString()
                 var prodPrecio = precio.text.toString()
+                var prodTotal = prodPrecio.toInt()*prodCant.toInt()
+                var T = prodTotal.toString()
                 comprasList.add(
                     ComprasData(
                         "Producto: $prodName",
                         "Cant:  $prodCant",
-                        "C$: $prodPrecio"
+                        "C$: $prodPrecio",
+                        "Total: $T"
                     )
                 )
                 dialog.dismiss()

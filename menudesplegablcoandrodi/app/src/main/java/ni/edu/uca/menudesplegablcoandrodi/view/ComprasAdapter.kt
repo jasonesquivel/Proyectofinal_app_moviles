@@ -1,6 +1,8 @@
 package ni.edu.uca.menudesplegablcoandrodi.view
 
+import android.app.ProgressDialog.show
 import android.content.Context
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,12 +21,14 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
         var name: TextView
         var cantidad: TextView
         var precio: TextView
+        var preciotot: TextView
         var mMenus: ImageView
 
         init {
             name = v.findViewById<TextView>(R.id.tvNombreProd)
             cantidad = v.findViewById<TextView>(R.id.tvCantidadProd)
             precio = v.findViewById<TextView>(R.id.tvPrecioProd)
+            preciotot = v.findViewById<TextView>(R.id.tvPrecioTot)
             mMenus = v.findViewById(R.id.mMenus)
             mMenus.setOnClickListener({ popupMenus(it) })
         }
@@ -43,6 +47,9 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
                         val nombre = v.findViewById<EditText>(R.id.etNombreProd)
                         val canti = v.findViewById<EditText>(R.id.etCantProd)
                         val precio = v.findViewById<EditText>(R.id.etPrecioProd)
+                        val precioT = v.findViewById<TextView>(R.id.tvPrecioTot)
+                       // var precioTotal = canti.toString().toInt()*precio.toString().toInt()
+                       // var T = precioTotal.toString()
 
                         AlertDialog.Builder(c)
                             .setView(v)
@@ -50,8 +57,7 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
 
                                 position.nombreProd = ("Producto: " + nombre.text.toString())
                                 position.cantidadProd = ("Cant: " + canti.text.toString())
-                                position.precioProd = ("Precio: " + precio.text.toString())
-
+                                position.precioProd = ("C$: " + precio.text.toString())
                                 notifyDataSetChanged()
                                 Toast.makeText(c, "User Information is Edited", Toast.LENGTH_SHORT)
                                     .show()
@@ -113,6 +119,7 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
         holder.name.text = newList.nombreProd
         holder.cantidad.text = newList.cantidadProd
         holder.precio.text = newList.precioProd
+        holder.preciotot.text = newList.precioTotal
     }
 
     override fun getItemCount(): Int = comprasList.size
