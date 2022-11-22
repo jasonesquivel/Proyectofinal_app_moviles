@@ -41,8 +41,10 @@ class CreacionDeCuenta : Fragment() {
         binding.btnRegistro.setOnClickListener {
             val user = binding.etUsuario.text.toString()
             val pass = binding.etContraseA.text.toString()
+            val sal = binding.etSaldoactual.text.toString()
             preferen.SaveUsuario(user)
             preferen.SavePass(pass)
+            preferen.SaveSal(sal)
             it.findNavController().navigate(R.id.login)
 
             (activity as AppCompatActivity).supportActionBar?.show()
