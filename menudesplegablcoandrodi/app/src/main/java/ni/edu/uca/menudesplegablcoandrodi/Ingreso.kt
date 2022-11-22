@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentIngresoBinding
+import ni.edu.uca.menudesplegablcoandrodi.model.Shared
 
 
 class Ingreso : Fragment() {
@@ -35,6 +36,8 @@ class Ingreso : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
+        var msnsal = Shared.preferen.getSal()
+        binding.tvSaldoActual.setText(msnsal)
         binding.btnGuardarSaldo.setOnClickListener {
             calcularIngresos()
 
