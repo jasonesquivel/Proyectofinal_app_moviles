@@ -48,12 +48,16 @@ class Login : Fragment() {
                 val nameTemp: String = binding.etUsername.text.toString()
                 val pwdTemp: String = binding.etPassword.text.toString()
 
-                if (nameTemp == preferen.getUSer() && pwdTemp == preferen.getPass()) {
-                    Navigation.findNavController(binding.root).navigate(R.id.nav_home)
+                if (nameTemp.isEmpty() || pwdTemp.isEmpty()) {
+                    Toast.makeText(this.context, "Campos vacios", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
+                    if (nameTemp == preferen.getUSer() && pwdTemp == preferen.getPass()) {
+                        Navigation.findNavController(binding.root).navigate(R.id.nav_home)
+                    } else {
+                        Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
+                    }
+                    (activity as AppCompatActivity).supportActionBar?.show()
                 }
-                (activity as AppCompatActivity).supportActionBar?.show()
             }
         } catch (ex: Exception) {
         }
