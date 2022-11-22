@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentIngresoBinding
 import ni.edu.uca.menudesplegablcoandrodi.model.Shared
+import ni.edu.uca.menudesplegablcoandrodi.model.Shared.Companion.preferen
 
 
 class Ingreso : Fragment() {
@@ -40,7 +41,6 @@ class Ingreso : Fragment() {
         binding.tvSaldoActual.setText(msnsal)
         binding.btnGuardarSaldo.setOnClickListener {
             calcularIngresos()
-
         }
 
     }
@@ -58,18 +58,17 @@ class Ingreso : Fragment() {
             Toast.makeText(context, "Por favor llene todos los campos!", Toast.LENGTH_SHORT).show()
 
         } else {
+            var msnsal = Shared.preferen.getSal().toInt()
+            var saldoIngresado: Int = binding.etIngreso.text.toString().toInt()
+            var total = (msnsal + saldoIngresado)
+            preferen.SaveSal(total.toString())
+            binding.tvSaldoActual.setText(total.toString())
+
             Toast.makeText(context, "El proceso ha sido exitoso!", Toast.LENGTH_SHORT).show()
         }
 
         //Error en esta parte del codigo, la aplicacion se detiene cuando se guardan todos los datos
-        binding.btnGuardarSaldo.setOnClickListener {
-            var saldoActual: Int = binding.etIngreso.text.toString().toInt()
-            var saldoIngresado: Int = binding.etRazonIngreso.text.toString().toInt()
-            var total: Int = (saldoActual + saldoIngresado)
-            binding.tvSaldoActual.setText(total)
 
-
-        }
 
 
     }
