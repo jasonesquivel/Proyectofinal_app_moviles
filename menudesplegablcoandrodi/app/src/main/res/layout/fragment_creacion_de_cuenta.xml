@@ -93,6 +93,29 @@
             app:layout_constraintTop_toBottomOf="@id/etApellido" />
 
         <EditText
+            android:id="@+id/etSaldoactual"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Saldo Actual"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCorreo" />
+
+        <EditText
+            android:id="@+id/etSalario"
+            android:layout_width="319dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="40dp"
+            android:hint="Salario"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSaldoactual" />
+
+
+        <EditText
             android:id="@+id/etUsuario"
             android:layout_width="319dp"
             android:layout_height="61dp"
@@ -101,7 +124,7 @@
             android:inputType="text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etCorreo" />
+            app:layout_constraintTop_toBottomOf="@id/etSalario" />
 
         <EditText
             android:id="@+id/etContraseña"
