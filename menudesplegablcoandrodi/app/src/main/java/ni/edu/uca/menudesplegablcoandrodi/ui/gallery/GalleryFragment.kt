@@ -8,10 +8,12 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ni.edu.uca.menudesplegablcoandrodi.R
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentGalleryBinding
+import ni.edu.uca.menudesplegablcoandrodi.model.Shared
 import ni.edu.uca.menudesplegablcoandrodi.model.UserData
 import ni.edu.uca.menudesplegablcoandrodi.view.UserAdapter
 
@@ -43,14 +45,18 @@ class GalleryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val lista= listOf("Vacaciones","Remuneracion economica")
+
         val adaptador = context?.let { ArrayAdapter(it,android.R.layout.simple_spinner_item,lista) }
         binding.mySpinner.adapter=adaptador
 
         binding.mySpinner.onItemSelectedListener= object:
             AdapterView.OnItemSelectedListener{
+
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 if(p2==1){
+
                     addInfo()
+                    Navigation.findNavController(binding.root).navigate(R.id.nav_gallery)
                 }
                 else{
 
@@ -82,6 +88,10 @@ class GalleryFragment : Fragment() {
             addDialog?.setPositiveButton("ok"){
                     dialog,_->  val names = username.text.toString()
                 dialog.dismiss()
+                var saldoIngresado= names.toInt()
+                var msnsal = Shared.preferen.getSal().toInt()
+                var total = (msnsal + saldoIngresado)
+                Shared.preferen.SaveSal(total.toString())
             }
             addDialog?.setNegativeButton("cancel"){
                     dialog,_->
