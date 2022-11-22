@@ -42,7 +42,7 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
-        binding.btnLogIn.setOnClickListener {
+
             try {
                 binding.btnLogIn.setOnClickListener {
                     val nameTemp: String = binding.etUsername.text.toString()
@@ -53,12 +53,12 @@ class Login : Fragment() {
                     } else {
                         Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
                     }
-
+                    (activity as AppCompatActivity).supportActionBar?.show()
                 }
             } catch (ex: Exception) {
             }
-            (activity as AppCompatActivity).supportActionBar?.show()
-        }
+
+
 
     }
 

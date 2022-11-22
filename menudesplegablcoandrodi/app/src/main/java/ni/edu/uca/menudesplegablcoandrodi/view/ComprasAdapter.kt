@@ -43,11 +43,16 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
 
                         val v = LayoutInflater.from(c)
                             .inflate(R.layout.fragment_agregar_productos, null)
+                        val d = LayoutInflater.from(c)
+                            .inflate(R.layout.fragment_lista_de_compras, null)
 
                         val nombre = v.findViewById<EditText>(R.id.etNombreProd)
                         val canti = v.findViewById<EditText>(R.id.etCantProd)
                         val precio = v.findViewById<EditText>(R.id.etPrecioProd)
-                        val precioT = v.findViewById<TextView>(R.id.tvPrecioTot)
+                        val prodCant = cantidad.text.toString()
+                        var prodPrecio = precio.text.toString()
+
+
                        // var precioTotal = canti.toString().toInt()*precio.toString().toInt()
                        // var T = precioTotal.toString()
 
@@ -58,6 +63,8 @@ class ComprasAdapter(val c: Context, val comprasList: ArrayList<ComprasData>) :
                                 position.nombreProd = ("Producto: " + nombre.text.toString())
                                 position.cantidadProd = ("Cant: " + canti.text.toString())
                                 position.precioProd = ("C$: " + precio.text.toString())
+                                position.precioTotal = ("total: "+ canti.text.toString().toInt()*precio.text.toString().toInt())
+
                                 notifyDataSetChanged()
                                 Toast.makeText(c, "User Information is Edited", Toast.LENGTH_SHORT)
                                     .show()
