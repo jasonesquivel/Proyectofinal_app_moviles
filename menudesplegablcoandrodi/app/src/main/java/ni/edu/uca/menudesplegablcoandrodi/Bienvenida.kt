@@ -13,9 +13,6 @@ import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentBienvenidaBinding
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentCreacionDeCuentaBinding
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentLoginBinding
 
-
-
-
 class Bienvenida : Fragment() {
     private lateinit var  drawer: DrawerLayout
     lateinit var binding: FragmentBienvenidaBinding

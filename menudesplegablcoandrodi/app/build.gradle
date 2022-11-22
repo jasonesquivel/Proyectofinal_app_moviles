@@ -8,12 +8,12 @@ android {
         viewBinding true
     }
     namespace 'ni.edu.uca.menudesplegablcoandrodi'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "ni.edu.uca.menudesplegablcoandrodi"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

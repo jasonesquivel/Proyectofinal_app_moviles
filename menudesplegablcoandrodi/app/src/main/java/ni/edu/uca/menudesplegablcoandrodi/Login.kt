@@ -8,16 +8,17 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import ni.edu.uca.menudesplegablcoandrodi.R
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentLoginBinding
+import ni.edu.uca.menudesplegablcoandrodi.model.Shared.Companion.preferen
 import ni.edu.uca.menudesplegablcoandrodi.model.Usuario
 
 
 class Login : Fragment() {
-    private lateinit var  drawer: DrawerLayout
+    private lateinit var drawer: DrawerLayout
     lateinit var binding: FragmentLoginBinding
-    val users = ArrayList<Usuario>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -33,27 +34,29 @@ class Login : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentLoginBinding.inflate(inflater, container, false)
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
         binding.btnLogIn.setOnClickListener {
-            var user = binding.etUsername.text.toString()
-            var pass = binding.etPassword.text.toString()
+            try {
+                binding.btnLogIn.setOnClickListener {
+                    val nameTemp: String = binding.etUsername.text.toString()
+                    val pwdTemp: String = binding.etPassword.text.toString()
 
-            users.add(Usuario("Admin","1234"))
-            users.add(Usuario("Jason","Esquivel"))
+                    if (nameTemp == preferen.getUSer() && pwdTemp == preferen.getPass()) {
+                        Navigation.findNavController(binding.root).navigate(R.id.nav_home)
+                    } else {
+                        Toast.makeText(this.context, "Datos erroneos", Toast.LENGTH_SHORT).show()
+                    }
 
-            if(users.contains(Usuario(user,pass))){
-                it.findNavController().navigate(R.id.login_navhome)
+                }
+            } catch (ex: Exception) {
             }
-            if(user.isEmpty() && pass.isEmpty()){
-                Toast.makeText(context,"Campos vacios", Toast.LENGTH_SHORT).show()
-            }
-
             (activity as AppCompatActivity).supportActionBar?.show()
         }
 
