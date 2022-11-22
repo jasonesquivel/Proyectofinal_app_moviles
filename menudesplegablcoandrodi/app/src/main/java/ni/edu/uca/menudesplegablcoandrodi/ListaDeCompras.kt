@@ -87,9 +87,9 @@ class ListaDeCompras : Fragment() {
                 var prodPrecio = precio.text.toString()
                 comprasList.add(
                     ComprasData(
-                        "Nombre: $prodName",
+                        "Producto: $prodName",
                         "Cant:  $prodCant",
-                        "Precio: $prodPrecio"
+                        "C$: $prodPrecio"
                     )
                 )
                 dialog.dismiss()

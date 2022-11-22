@@ -98,6 +98,7 @@
             android:layout_height="61dp"
             android:layout_marginTop="40dp"
             android:hint="Usuario"
+            android:inputType="text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etCorreo" />
@@ -133,7 +134,7 @@
             android:fontFamily="@font/merriweather_black"
             android:text="Registrar"
             android:textColor="@android:color/white"
-            app:cornerRadius="100dp"
+            app:cornerRadius="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etCfContraseña" />

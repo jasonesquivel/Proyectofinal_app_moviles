@@ -41,6 +41,7 @@
         android:id="@+id/etUsername"
         android:layout_width="341dp"
         android:layout_height="53dp"
+        android:inputType="text"
         android:layout_marginTop="40dp"
         android:hint="Usuario"
         app:layout_constraintLeft_toLeftOf="parent"

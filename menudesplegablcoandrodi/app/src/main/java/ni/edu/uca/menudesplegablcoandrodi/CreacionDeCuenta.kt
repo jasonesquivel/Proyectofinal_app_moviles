@@ -43,7 +43,7 @@ class CreacionDeCuenta : Fragment() {
             val pass = binding.etContraseA.text.toString()
             preferen.SaveUsuario(user)
             preferen.SavePass(pass)
-            it.findNavController().navigate(R.id.creacionDeCuenta_bienvenida)
+            it.findNavController().navigate(R.id.login)
 
             (activity as AppCompatActivity).supportActionBar?.show()
         }
