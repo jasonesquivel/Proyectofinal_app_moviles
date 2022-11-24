@@ -7,202 +7,158 @@
     tools:context=".VarianzaSalarial">
 
 
-    <ImageView
-        android:id="@+id/btnMenu"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/icono_menu"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/tvYourWallet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="23dp"
-        android:fontFamily="@font/merriweather_black"
-        android:text="Your Wallet"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintLeft_toRightOf="@id/btnMenu"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tvSaldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="110dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/merriweather_black"
         android:text="Saldo:"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSaldoActual"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="104dp"
-        android:text=""
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintLeft_toRightOf="@id/tvSaldo"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/cv_Wallet"
-        android:layout_width="54dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
-        android:paddingStart="0.01dp"
-        android:paddingTop="20dp"
-        android:src="@drawable/ic_wallet"
-        app:civ_circle_background_color="#EDB61C"
-        app:layout_constraintRight_toLeftOf="parent"
+        android:id="@+id/tvSalario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/merriweather_black"
+        android:text="Salario actual:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCordobasSalario"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/merriweather"
+        android:text="C$"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvSalario"
+        app:layout_constraintTop_toBottomOf="@id/tvCordobas" />
+
+
+
+    <TextView
+        android:id="@+id/tvCordobas"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweather"
+        android:text="C$"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvSaldo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSaldoActual"
+        android:layout_width="65dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweather"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvCordobas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvSalarioActual"
+        android:layout_width="65dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/merriweather"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@id/tvCordobasSalario"
+        app:layout_constraintTop_toBottomOf="@+id/tvSaldoActual" />
 
     <TextView
         android:id="@+id/tvAgregarIngreso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="124dp"
         android:fontFamily="@font/merriweather_black"
         android:text="Varianza salarial:"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvSeparador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="516dp"
-        android:text="_____________"
-        android:textColor="#3C55D5"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvVarianza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/merriweather_light"
         android:text="Tipo de varianza:"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioBtnNuevoSalario"
-        android:layout_width="203dp"
-        android:layout_height="23dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="184dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="Nuevo salario"
+    <EditText
+        android:id="@+id/etNuevoSalarioCordobas"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/Nuevo_salario"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvVarianza" />
-
-    <RadioButton
-        android:id="@+id/radioBtnNuevoTrabajo"
-        android:layout_width="203dp"
-        android:layout_height="23dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="184dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="Nuevo trabajo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioBtnNuevoSalario" />
-
-    <RadioButton
-        android:id="@+id/radioBtnAsenso"
-        android:layout_width="203dp"
-        android:layout_height="23dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="184dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="Asenso de trabajo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioBtnNuevoTrabajo" />
-
-    <RadioButton
-        android:id="@+id/radioBtnOtro"
-        android:layout_width="203dp"
-        android:layout_height="23dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="184dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="Otro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioBtnAsenso" />
-
-    <TextView
-        android:id="@+id/tvNuevoSalario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="460dp"
-        android:fontFamily="@font/merriweather_light"
-        android:text="Nuevo Salario en C$:"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvIngresoActual"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="452dp"
-        android:text=""
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintLeft_toRightOf="@id/tvNuevoSalario"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="112dp"
         android:backgroundTint="#3C55D5"
         android:fontFamily="@font/merriweather_black"
         android:padding="15dp"
@@ -211,9 +167,67 @@
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNuevoSalario"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgVarianza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rbNuevoSalario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418">
+
+
+        <RadioButton
+            android:id="@+id/rbNuevoSalario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Nuevo salario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.116"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvVarianza"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <RadioButton
+            android:id="@+id/rbNuevoTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nuevo trabajo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.116"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbNuevoSalario" />
+
+        <RadioButton
+            android:id="@+id/rbAsensoTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Asenso de trabajo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbNuevoTrabajo" />
+
+        <RadioButton
+            android:id="@+id/rbOtro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Otro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbAsensoTrabajo" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

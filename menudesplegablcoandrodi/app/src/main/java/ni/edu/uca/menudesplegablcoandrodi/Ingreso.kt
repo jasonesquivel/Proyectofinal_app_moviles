@@ -65,9 +65,12 @@ class Ingreso : Fragment() {
             binding.tvSaldoActual.setText(total.toString())
 
             Toast.makeText(context, "El proceso ha sido exitoso!", Toast.LENGTH_SHORT).show()
+            binding.etIngreso.setText("")
+            binding.etRazonIngreso.setText("")
+            binding.etFechaIngreso.setText("")
+
         }
 
-        //Error en esta parte del codigo, la aplicacion se detiene cuando se guardan todos los datos
 
 
 

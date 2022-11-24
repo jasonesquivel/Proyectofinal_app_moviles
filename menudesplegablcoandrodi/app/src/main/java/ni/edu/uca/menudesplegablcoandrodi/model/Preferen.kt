@@ -8,6 +8,7 @@ class Preferen(val context: Context) {
     val SHARED_USER_PASS = "Pass"
     val SHARED_USER_SAL = "Sal"
     val SHARED_USER_SALARIO = "Salario"
+    val SHARED_USER_NUEVOSALARIO = "NuevoSalario"
 
     val storage = context.getSharedPreferences(SHARED_NAME, 0)
 
@@ -41,4 +42,19 @@ class Preferen(val context: Context) {
     fun getSalSalario(): String {
         return storage.getString(SHARED_USER_SALARIO, "")!!
     }
+
+    fun saveNuevoSalario(NuevoSalario : String ){
+        storage.edit().putString(SHARED_USER_NUEVOSALARIO, NuevoSalario).apply()
+    }
+
+    fun getNuevoSalario(): String{
+        return storage.getString(SHARED_USER_NUEVOSALARIO, "")!!
+
+    }
+
+
+
+
+
+
 }

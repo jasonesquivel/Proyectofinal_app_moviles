@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">menudesplegablcoandrodi</string>
-    <string name="por_favor_llene_los_siguiente_campos_para_ingresar_satisfactoriamente_a_su_cuenta">por favor llene los siguiente campos para ingresar satisfactoriamente a su cuenta</string>
+    <string name="por_favor_llene_los_siguiente_campos_para_ingresar_satisfactoriamente_a_su_cuenta">Por favor llene los siguiente campos para ingresar satisfactoriamente a su cuenta</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="bienvenido_a_your_wallet">Bienvenido a your Wallet</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -26,4 +26,5 @@
     <string name="Ingreso_en_cordobas">Ingreso en córdobas</string>
     <string name="Razon_de_ingreso">Razón de ingreso</string>
     <string name="Fecha_de_ingreso">Fecha de ingreso</string>
+    <string name="Nuevo_salario">Nuevo salario en C$</string>
 </resources>
