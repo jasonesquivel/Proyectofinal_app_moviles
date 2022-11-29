@@ -21,6 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ni.edu.uca.menudesplegablcoandrodi.R
 import ni.edu.uca.menudesplegablcoandrodi.databinding.FragmentSlideshowBinding
 import ni.edu.uca.menudesplegablcoandrodi.databinding.ListItemGastosBinding
+import ni.edu.uca.menudesplegablcoandrodi.model.Shared
 import ni.edu.uca.menudesplegablcoandrodi.model.UserData
 import ni.edu.uca.menudesplegablcoandrodi.view.UserAdapter
 
@@ -59,7 +60,8 @@ class SlideshowFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val inflter = LayoutInflater.from(context)
-
+        var msnsal = Shared.preferen.getSal()
+        binding.tvSaldoActual.setText(msnsal)
         val v = inflter.inflate(R.layout.fragment_slideshow, null)
         recv = v.findViewById<RecyclerView>(R.id.mRecycler)
 
@@ -73,19 +75,36 @@ class SlideshowFragment : Fragment() {
 
     }
 
+    private fun actualizar() {
+        val inflter = LayoutInflater.from(context)
+        val v = inflter.inflate(R.layout.add_item_gasto, null)
+        val userno = v.findViewById<EditText>(R.id.etuserNo)
+        var msnsal = Shared.preferen.getSal().toInt()
+        var saldoIngresado: Int = userno.toString().toInt()
+        var total = (msnsal - saldoIngresado)
+        Shared.preferen.SaveSal(total.toString())
+        binding.tvSaldoActual.setText(total.toString())
+    }
+
     private fun addInfo() {
         with(binding) {
             val inflter = LayoutInflater.from(context)
             val v = inflter.inflate(R.layout.add_item_gasto, null)
             val username = v.findViewById<EditText>(R.id.etuserNa)
             val userno = v.findViewById<EditText>(R.id.etuserNo)
+            var msnsal = Shared.preferen.getSal().toInt()
             val addDialog = context?.let { AlertDialog.Builder(it) }
             addDialog?.setView(v)
             addDialog?.setPositiveButton("ok") { dialog, _ ->
                 val names = username.text.toString()
                 val number = userno.text.toString()
-                userList.add(UserData("Nombre: $names", "Numero de telefono: $number"))
+                userList.add(UserData("Gasto: $names", "Costo: $number"))
+                var total = (msnsal - number.toInt())
+                Shared.preferen.SaveSal(total.toString())
+                binding.tvSaldoActual.setText(total.toString())
+
                 dialog.dismiss()
+
             }
             addDialog?.setNegativeButton("cancel") { dialog, _ ->
                 dialog.dismiss()
@@ -99,6 +118,7 @@ class SlideshowFragment : Fragment() {
 
 
         }
+
     }
 
 

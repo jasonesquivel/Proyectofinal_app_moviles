@@ -45,8 +45,8 @@ class UserAdapter(
                             .setView(v)
                             .setPositiveButton("Ok") { dialog, _ ->
 
-                                position.userName = ("Nombre: " + name.text.toString())
-                                position.userMb = ("Numero de telefono: " + number.text.toString())
+                                position.userName = ("Gasto: " + name.text.toString())
+                                position.userMb = ("Costo: " + number.text.toString())
 
                                 notifyDataSetChanged()
                                 Toast.makeText(c, "User Information is Edited", Toast.LENGTH_SHORT)
